@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OrderedTest name="coretest" storage="c:\src\koib_2010\main\yaw.common\tests\coretest\orderedtests\coretest.orderedtest" id="43c80369-e02c-495b-9218-fa98dd7ed576" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Css projectStructure="" iteration="" />
+  <Execution timeOut="2147483647" id="1f0eaf51-f081-4a3a-a6f5-6d074069e065" />
+  <Owners>
+    <Owner name="" />
+  </Owners>
+  <TestLinks>
+    <TestLink id="538a22fa-f0ad-e955-18b9-21dc7e8b8c44" name="OT_01_CoreApplicationConstructorTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="85054a0e-3577-5fa4-0900-957ce990ce04" name="OT_02_GetSubsystemsTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b1d51750-2262-c312-b3a4-169a7c643dbb" name="OT_03_GetSubsystemByNameAndTypeTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e798df67-3572-7aa3-1187-990a7173eea4" name="OT_04_GetSubsystemOrThrowFailTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="11fc1d08-833f-c199-b343-540244a6880e" name="OT_05_GetSubsystemOrThrowTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2509e4c6-fda1-423d-e754-e5e968cf7f25" name="OT_06_ApplyNewConfigTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b4763173-709f-5f51-a031-7bd593092a0c" name="OT_07_GetSubsystemByNameTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8d945489-f361-e24e-35a7-5df7dbcfa7ef" name="OT_08_GetSubsystemByNullNameFailTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b5848ed9-8201-085a-324c-cdc23df8da10" name="OT_09_GetSubsystemByEmptyNameFailTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="3d18228b-4c3a-2b02-2c3b-330c9a80f98e" name="OT_10_GetSubsystemByNameExceptionTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e4b4b588-c9d0-a2a0-9d7d-34883c14e5dc" name="OT_11_SubsystemConfigUpdatedTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="f9e909b1-152e-5c76-0ebf-0a4d28756295" name="OT_12_ExitThreadTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

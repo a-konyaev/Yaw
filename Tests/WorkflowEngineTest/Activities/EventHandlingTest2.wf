@@ -1,0 +1,51 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет переключение выполнения потока работ при возникновении события-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <SubscribeToEvent
+      Name="1"
+      Event="@TestEvent"
+      Handler="h"
+      HandlingType="Sync"/>
+
+    <!--асинхронно возбуждает событие через 0.1 сек-->
+    <Activity
+      Name="2"
+      Execute="RaiseEvent" />
+
+    <!--выполнение действий 3 и 4 НЕ должно быть прервано в результате обработки события,
+        потому что их приоритет выше, чем у действия-обработчика-->
+    <Activity
+      Name="3"
+      Execute="Sleep"
+      Parameters="ms=200"
+      Priority="4"/>
+
+    <Activity
+      Name="4"
+      Execute="SetTestValue"
+      Parameters="TestValue=1"
+      Priority="4"/>
+
+    <!--вот здесь должно сработать переключение выполнения потока работ на действие-обработчик-->
+    
+    <Activity
+      Name="5"
+      Execute="DoNothing"
+      k:Yes="@@Return(No)"/>
+
+    <Activity
+      Name="h"
+      Execute="Test"
+      Parameters="Expected=1"
+      k:No="@@Return(No)"/>
+
+  </CompositeActivity>
+
+</Workflow>

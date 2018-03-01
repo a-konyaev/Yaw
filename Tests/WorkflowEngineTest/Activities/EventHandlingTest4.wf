@@ -1,0 +1,41 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет переключение выполнения потока работ при возникновении события-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <SubscribeToEvent
+      Name="1"
+      Event="@Root.TestEvent"
+      Handler="h"
+      HandlingType="Sync"/>
+
+    <!--асинхронно возбуждает событие через 0.1 сек-->
+    <Activity
+      Name="2"
+      Execute="RaiseEvent" />
+
+    <UnsubscribeFromEvent
+      Name="3"
+      Event="@Root.TestEvent"
+      Handler="h"/>
+
+    <Activity
+      Name="4"
+      Execute="Sleep"
+      Parameters="ms=150"
+      k:Yes="@@Return(Yes)"/>
+
+    <!--обработчик события не должен быть вызван, т.к. от события отписались-->
+    <Activity
+      Name="h"
+      Execute="DoNothing"
+      k:Yes="@@Return(No)"/>
+
+  </CompositeActivity>
+
+</Workflow>

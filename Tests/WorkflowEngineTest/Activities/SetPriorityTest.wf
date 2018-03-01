@@ -1,0 +1,20 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет установку приоритета у действия-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+    <Activity 
+      Name="1"
+      Execute="DoNothing" />
+
+    <Activity
+      Name="2"
+      Priority="7"
+      Execute="DoNothing" />
+    
+  </CompositeActivity>
+</Workflow>

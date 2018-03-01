@@ -1,0 +1,18 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет инициализацию и деинициализацию действия-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+    
+    <Activity 
+      Name="1" 
+      Initialize="Init"
+      Uninitialize="Uninit"
+      Execute="CheckInitUninitCalled" />
+    
+  </CompositeActivity>
+</Workflow>

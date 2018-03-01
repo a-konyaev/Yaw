@@ -1,0 +1,37 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет выполнение ReferenceActivity-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <ReferenceActivity
+      Name="1"
+      Execute="C.1"
+      Parameters="p1=1"/>
+    
+    <ReferenceActivity
+      Name="2"
+      Execute="C"
+      Parameters="IntPropWR=123;StartActivity=1"/>
+
+  </CompositeActivity>
+
+  <CompositeActivity Name="C"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <Activity
+      Name="0"
+      Execute="DoNothing"
+      k:Yes="@@Return(No)"/>
+      
+    <Activity
+      Name="1"
+      Execute="CheckReferenceActivityCall" 
+      Parameters="p1=2"/>
+
+  </CompositeActivity>
+</Workflow>

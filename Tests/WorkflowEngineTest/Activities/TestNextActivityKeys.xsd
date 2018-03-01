@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+           targetNamespace="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           id="TestNextActivityKeys">
+  <xs:attribute name="Yes">
+    <xs:annotation>
+      <xs:documentation>Тестовый ключ Да</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="No">
+    <xs:annotation>
+      <xs:documentation>Тестовый ключ Нет</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+</xs:schema>

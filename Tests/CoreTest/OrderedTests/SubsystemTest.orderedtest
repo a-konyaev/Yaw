@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OrderedTest name="subsystemtest" storage="c:\src\koib_2010\main\yaw.common\tests\coretest\orderedtests\subsystemtest.orderedtest" id="774226d6-b563-4e01-b043-fe99685457f7" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Css projectStructure="" iteration="" />
+  <Execution timeOut="2147483647" />
+  <Owners>
+    <Owner name="" />
+  </Owners>
+  <TestLinks>
+    <TestLink id="2720d726-54d4-dd19-e205-e654e4cde05b" name="OT_01_WaitOneTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="c7a7ec80-b490-c84d-1b58-8280768dd947" name="OT_02_SleepTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1cbed704-de3a-edcd-b1b2-3b2e5186666c" name="OT_03_SleepWhileDisposeTest" storage="..\bin\debug\yaw.tests.coretest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

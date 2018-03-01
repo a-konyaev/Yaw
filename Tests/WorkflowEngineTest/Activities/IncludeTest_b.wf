@@ -1,0 +1,15 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys">
+
+  <Include Ref="Activities/IncludeTest_a.wf"/>
+  <Include Ref="Activities/IncludeTest_c.wf"/>
+  
+  <CompositeActivity Name="B"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+    
+    <ReferenceActivity Name="1" Execute="A"/>
+    <ReferenceActivity Name="2" Execute="C"/>
+    
+  </CompositeActivity>
+</Workflow>

@@ -1,0 +1,31 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет установку параметров-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+    <Activity
+      Name="1"
+      Execute="CheckProp1"
+      Parameters="
+        p1=123;
+        p2=@IntProp;p3=@Root.StrProp;p4=@R.ArrProp;
+        p5=@@True;p6=@@False;
+        p7=[a,b];
+        p8=123.21:22:23.77;
+        p9=A"/>
+
+    <Activity
+      Name="2"
+      Execute="CheckProp2">
+      <Parameters>
+        <Parameter Name="p1">1</Parameter>
+        <Parameter Name="p2">a</Parameter>
+      </Parameters>
+    </Activity>
+
+  </CompositeActivity>
+</Workflow>

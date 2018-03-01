@@ -1,0 +1,62 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет переключение выполнения потока работ при возникновении события-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <SubscribeToEvent
+      Name="1"
+      Event="@C.TestEvent"
+      Handler="h"
+      HandlingType="Sync"/>
+
+    <ReferenceActivity
+      Name="2"
+      Execute="C"
+      k:Yes="@@Return(No)"/>
+    
+    <Activity
+      Name="h"
+      Execute="DoNothing"/>
+
+  </CompositeActivity>
+
+  <CompositeActivity Name="C"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <!--асинхронно возбуждает событие через 0.1 сек-->
+    <Activity
+      Name="1"
+      Execute="RaiseEvent" />
+
+    <ReferenceActivity
+      Name="2"
+      Execute="C2"/>
+    
+  </CompositeActivity>
+
+  <CompositeActivity Name="C2"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <ReferenceActivity
+      Name="1"
+      Execute="C3"/>
+
+  </CompositeActivity>
+
+  <CompositeActivity Name="C3"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest">
+
+    <!--выполнение этого действия должно быть прервано в результате обработки события-->
+    <Activity
+      Name="1"
+      Execute="SleepAndThrow"
+      Parameters="ms=200"/>
+
+  </CompositeActivity>
+
+</Workflow>

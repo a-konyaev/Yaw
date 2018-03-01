@@ -1,0 +1,15 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет просто создание элементарного потока работ-->
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest"
+                     Tracking="false">
+    
+    <Activity Name="1" Execute="DoNothing"/>
+    
+  </CompositeActivity>
+</Workflow>

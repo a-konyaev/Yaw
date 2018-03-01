@@ -1,0 +1,30 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <!--тест проверяет подключение вложенных схем-->
+
+  <Include Ref="Activities/IncludeTest_a.wf"/>
+  <Include Ref="Activities/IncludeTest_b.wf"/>
+  <Include Ref="Activities/IncludeTest_c.wf"/>
+  
+  <CompositeActivity Name="R"
+                     Class="Yaw.Tests.WorkflowEngineTest.Activities.TestActivity, Yaw.Tests.WorkflowEngineTest"
+                     Tracking="false">
+    
+    <Activity Name="1" Execute="IncreaseTestValue"/>
+    <ReferenceActivity Name="2" Execute="A"/>
+    <ReferenceActivity Name="3" Execute="B"/>
+    <ReferenceActivity Name="4" Execute="C"/>
+    <ReferenceActivity Name="5" Execute="C.1"/>
+
+    <Activity
+      Name="t"
+      Execute="Test"
+      Parameters="Expected=6"
+      k:No="@@Return(No)"/>
+    
+  </CompositeActivity>
+</Workflow>

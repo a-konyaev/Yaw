@@ -1,0 +1,11 @@
+<Workflow
+  xmlns="http://schemas.yaw.ru/Workflow"
+  xmlns:k="http://schemas.yaw.ru/Workflow/TestNextActivityKeys"
+  RootActivity="R"
+  DefaultNextActivityKey="Yes">
+
+  <ActivityParametersBindings CompositeActivityName="R">
+    <ActivityParametersBinding ActivityName="3" Parameters="TestValue=777"/>
+  </ActivityParametersBindings>
+  
+</Workflow>
